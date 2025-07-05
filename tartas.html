@@ -39,10 +39,10 @@
   </header>
 
   <!-- MENU DESPLEGABLE -->
-  <div id="mobile-menu" class="menu hidden">
+  <div id="mobile-menu" class="menu">
     <ul>
       <li><a href="index.html">Inicio</a></li>
-      <li><a href="tartas.html">Tartas</a></li>
+      <li><a href="tartas.html" class="active">Tartas</a></li>
       <li><a href="delivery.html">Delivery</a></li>
       <li><a href="ubicacion.html">Ubicación</a></li>
       <li><a href="contacto.html">Contacto</a></li>
@@ -111,17 +111,7 @@
     </div>
   </footer>
 
-  <script>
-    // Toggle burger menu
-    const burger = document.getElementById('burger-btn');
-    const menu = document.getElementById('mobile-menu');
-    burger.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-    // Carrito: redirige a página de carrito
-    document.getElementById('cart-btn').addEventListener('click', () => {
-      window.location.href = '/carrito.html';
-    });
-  </script>
+  <script src="public/js/main.js"></script>
+
 </body>
 </html>

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>PECADO'S Cheesecakes</title>
   <link rel="stylesheet" href="public/assets/css/main.css">
+  <link rel="stylesheet" href="public/assets/css/home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
@@ -16,12 +17,14 @@
   <!-- nav -->
   <header class="navbar">
     <a href="index.html">
-        <img src="public/assets/images/main-logo-removebg-preview.png" alt="PECADO'S Cheesecakes" class="logo-img">
+        <img src="public/assets/images/main-logo-removebg-preview.png" 
+        alt="PECADO'S Cheesecakes" 
+        class="logo-img">
       </a>
     <nav>
       <button id="cart-btn" aria-label="Carrito">
         <!-- SVG Carrito -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="9" cy="21" r="1"></circle>
           <circle cx="20" cy="21" r="1"></circle>
           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
@@ -29,7 +32,7 @@
       </button>
       <button id="burger-btn" aria-label="Menú">
         <!-- SVG Burger -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
           <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -39,15 +42,16 @@
   </header>
 
   <!-- MENU DESPLEGABLE -->
-  <div id="mobile-menu" class="menu hidden">
+  <div id="mobile-menu" class="menu">
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="tartas.html">Tartas</a></li>
       <li><a href="delivery.html">Delivery</a></li>
-      <li><a href="ubicacion.html">Ubicación</a></li>
+      <li><a href="ubicacion.html" class="active">Ubicación</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </div>
+
 
   <main>
     <section class="tartas-section">
@@ -108,18 +112,8 @@
     </div>
   </footer>
 
-  <script>
-    // Toggle burger menu
-    const burger = document.getElementById('burger-btn');
-    const menu = document.getElementById('mobile-menu');
-    burger.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-    });
-    // Carrito: redirige a página de carrito
-    document.getElementById('cart-btn').addEventListener('click', () => {
-      window.location.href = '/carrito.html';
-    });
-  </script>
+  <script src="public/js/main.js"></script>
+
 </body>
 </html>
 
