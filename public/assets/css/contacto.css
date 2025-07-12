@@ -7,7 +7,7 @@
 
 
 
-.tartas-section {
+.contact-intro {
     padding: 0.5rem 0.5rem 2.5rem 0.5rem;
     display: flex;
     flex-direction: column;
@@ -15,23 +15,232 @@
     justify-content: center;
     text-align: center;
   }
-  .tartas-section h2 {
-      font-family: "Brand", cursive;
+  .contact-intro__container {
+    max-width: auto;
+    margin: 0 auto;
+  }
+  .contact-intro__title {
+    font-family: "Brand", cursive;
       font-style: normal;        
       margin: 0.5rem 0rem;
       font-size: 3rem;
       padding-bottom: 1rem;
   }
-  .tartas-img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  .tartas-section p {
+  .contact-intro__text {
     font-family: 'Gotu';
     font-size: medium;
     line-height: 1.5;
     font-size: 1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
     padding: 0 2rem;
+    color: #555;
+
   }
+  .contact-intro__divider {
+    border: none;
+    height: 1px;
+    background: #e0e0e0;
+    width: 50px;
+    margin: 0 auto;
+  }
+
+
+  /* Formulario Contacto */
+.contact-form {
+  background: #fff;
+  padding: 2rem 1rem;
+}
+.contact-form__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.contact-form__input {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+.contact-form__input:focus {
+  outline: none;
+  border-color: #d6336c;
+}
+
+.contact-form__title {
+  font-family: 'Gotu';
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+/* Feedback de validación */
+.contact-form__input.valid {
+  border-color: #4caf50;
+}
+.contact-form__input.invalid {
+  border-color: #f44336;
+}
+
+/* Mensajes de error */
+.contact-form__error {
+  font-size: 0.85rem;
+  color: #f44336;
+  display: none;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+.contact-form__input:invalid + .contact-form__error {
+  display: block;
+}
+
+/* Selector desplegable */
+.contact-form__input[type="select"],
+.contact-form__input[type="select"] option {
+  appearance: none;
+}
+.contact-form__input::-ms-expand {
+  display: none;
+}
+
+/* Botón enviar */
+.contact-form__submit {
+  align-self: flex-start;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Alineación móvil/desktop */
+@media (min-width: 768px) {
+  .contact-form__submit {
+    align-self: center;
+  }
+}
+
+
+
+/* Bordes neutros por defecto */
+.contact-form__input {
+  border: 1px solid #ccc; /* gris suave */
+}
+
+/* Quitar estilos automáticos de :valid/:invalid */
+.contact-form__input:valid,
+.contact-form__input:invalid {
+  border-color: #ccc;
+}
+
+/* Sólo tras "tocado" (blur) pintamos */
+.contact-form__input.touched:valid {
+  border-color: #4caf50;  /* verde */
+}
+.contact-form__input.touched:invalid {
+  border-color: #f44336;  /* rojo */
+}
+
+/* Mostrar error sólo tras tocar y estar inválido */
+.contact-form__input.touched:invalid + .contact-form__error {
+  display: none;
+}
+.contact-form__input + .contact-form__error {
+  display: none;
+}
+
+/* Ocultar secciones al añadir clase .hidden */
+.hidden {
+  display: none !important;
+}
+
+
+/* Sección Contacto Alternativo */
+.contact-alt {
+  background: #fafafa;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.contact-alt__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.contact-alt__title {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 3.5rem;
+  margin-top: 2rem;
+}
+.contact-alt__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+/* Botón común */
+.contact-alt__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s;
+  width: 100%;
+  max-width: 360px;
+  justify-content: center;
+}
+/* Iconos */
+.contact-alt__icon {
+  flex-shrink: 0;
+  width: 1rem;
+  height: auto;
+}
+
+/* 2. Botón Teléfono */
+.contact-alt__btn--phone {
+  background: #fff;
+  color: #000;
+  border: 2px solid #b69856;
+  margin-bottom: 1rem;
+}
+.contact-alt__btn--phone:hover {
+  background: #b69856;
+  color: #fff;
+}
+
+/* 3. Botón WhatsApp */
+.contact-alt__btn--whatsapp {
+  background: #25D366;
+  color: #fff;
+  border: 2px solid #25D366;
+  margin-bottom: 1rem;
+
+}
+.contact-alt__btn--whatsapp:hover {
+  background: #1ebe5c;
+  border-color: #1ebe5c;
+}
+
+/* 4. Botón Email */
+.contact-alt__btn--email {
+  background: transparent;
+  color: #333;
+  border: 2px solid #333;
+  margin-bottom: 1rem;
+
+}
+.contact-alt__btn--email:hover {
+  background: #333;
+  color: #fff;
+}
+
+/* Responsive: botones en fila en pantallas mayores */
+@media (min-width: 768px) {
+  .contact-alt__buttons {
+    flex-direction: row;
+  }
+}

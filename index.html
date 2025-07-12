@@ -50,7 +50,6 @@
     <ul>
       <li><a href="index.html"  class="active">Inicio</a></li>
       <li><a href="tartas.html">Tartas</a></li>
-      <li><a href="delivery.html">Delivery</a></li>
       <li><a href="ubicacion.html">Ubicación</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
@@ -58,7 +57,17 @@
 
   <!-- HERO -->
   <section id="inicio" class="hero">
-    <img src="public/assets/images/gallery-fe/grupo-56.jpeg" alt="Cheesecakes increíbles">
+
+    <picture class="hero">
+      <!-- Cuando el viewport sea ≥ 768px, carga la versión de escritorio -->
+      <source media="(min-width: 768px)" srcset="hero-desktop.jpg">
+      <!-- Por defecto (móvil) -->
+      <img src="public/assets/images/gallery-fe/grupo-56.jpeg" alt="Cheesecakes hero">
+
+    </picture>
+    
+
+
     <div class="hero-text">
       <a href="tartas.html" class="cta">Peca con nosotros</a>
     </div>
@@ -66,58 +75,136 @@
 
   <!-- MAIN -->
   <main>
-    <section class="tartas-section">
+    <section class="branding-section">
     <h2>Un pecado artesanal</h2>
-        <p> En PECADO’S, el placer no necesita excusas.</p>
-<p>Cada cheesecake nace con mimo artesanal.
-</p>
-<p>Ingredientes puros, recetas con carácter.
-</p>
-<p>No hay atajos, ni prisas, ni producciones masivas.
-</p> 
-<p>Solo sabor real, horneado con devoción.
-
-</p>     
-
+              <p> En PECADO’S, el placer no necesita excusas.</p>
+              <p>Cada cheesecake nace con mimo artesanal. </p>
+              <p>Ingredientes puros, recetas con carácter. </p>
+              <p>No hay atajos, ni prisas, ni producciones masivas. </p> 
+              <p>Solo sabor real, horneado con devoción. </p>     
         <p>Bienvenido al templo de las tartas de queso.</p>
       
-      <a href="tartas.html" class="cta ver-todas">Ver todas las tartas</a>
     </section>
 
-
-
-
-    <!-- Carrusel sabores PECADO'S -->
-<section class="sabores-section">
-  <h2 class="sabores-title">Descubre nuestros sabores <span class="arrow">&lt;</span></h2>
-  
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      
-      <!-- Sabor Lotus -->
-      <div class="carousel-item active">
-        <img src="public/assets/images/gallery-fe/solo-lotus.jpeg" alt="Cheesecake Lotus">
-        <h3 class="carousel-item-title">Lotus</h3>
-        <a href="/sabores/lotus.html" class="carousel-btn">Ver sabor</a>
+<!-- Sección “¿Cómo hacer tu pedido?” -->
+<section class="how-to">
+  <div class="how-to__container">
+    <h2 class="how-to__title">¿Cómo hacer tu pedido?</h2>
+    <div class="how-to__steps">
+      <!-- Paso 1 -->
+      <div class="how-to__step">
+        <div class="how-to__number">1</div>
+        <svg class="how-to__icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- forma exterior -->
+          <path d="M4 8 L14 5 L20 14 L5 18 Z"/>
+          <!-- líneas frontales paralelas -->
+          <path d="M5 10 L15 7"/>
+          <path d="M5 12 L15 9"/>
+          <path d="M5 14 L15 11"/>
+        </svg>
+        
+        
+     <!-- Queso -->
+     <path d="M5 17 L12 5 L19 17 Z" fill="#FFEB99"/>
+     <!-- Corte que separa el queso de la base -->
+     <line x1="5" y1="17" x2="19" y2="17"/>
+     <!-- Base (crust) -->
+     <path d="M3 21 L21 21 L19 17 L5 17 Z" fill="#D2B48C"/>
+   </svg>
+   
+        
+        
+   
+   
+        <h3 class="how-to__step-title">Elige tu tarta</h3>
+        <p class="how-to__step-text">Explora nuestros sabores y selecciona tu favorita.</p>
       </div>
-
-      <!-- Sabor Chocolate Blanco -->
-      <div class="carousel-item">
-        <img src="public/assets/images/gallery-fe/solo-choco-3.4.webp" alt="Cheesecake Chocolate Blanco">
-        <h3 class="carousel-item-title">Chocolate Blanco</h3>
-        <a href="/sabores/chocolate-blanco.html" class="carousel-btn">Ver sabor</a>
+      <!-- Paso 2 -->
+      <div class="how-to__step">
+        <div class="how-to__number">2</div>
+        <svg class="how-to__icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"/>
+          <circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+        </svg>
+        <h3 class="how-to__step-title">Haz tu pedido online</h3>
+        <p class="how-to__step-text">Confirma tu pedido antes de las 14:00 si la quieres para hoy.</p>
       </div>
-
-      <!-- Sabor Pistacho -->
-      <div class="carousel-item">
-        <img src="public/assets/images/gallery-fe/solo-pistacho.jpeg" alt="Cheesecake Pistacho">
-        <h3 class="carousel-item-title">Pistacho</h3>
-        <a href="/sabores/pistacho.html" class="carousel-btn">Ver sabor</a>
+      <!-- Paso 3 -->
+      <div class="how-to__step">
+        <div class="how-to__number">3</div>
+     
+        <svg class="how-to__icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- roof overhang -->
+          <path d="M2 2h20"/>
+          <!-- roof supports (3× altura) -->
+          <path d="M2 2v12"/>
+          <path d="M22 2v12"/>
+          <!-- awning top line -->
+          <path d="M3 14h18"/>
+          <!-- awning stripes -->
+          <path d="M6 14v-12"/>
+          <path d="M12 14v-12"/>
+          <path d="M18 14v-12"/>
+          <!-- shop façade -->
+          <rect x="3" y="14" width="18" height="9"/>
+          <!-- door -->
+          <rect x="10" y="17" width="4" height="6"/>
+        </svg>
+        
+        
+                      
+        <h3 class="how-to__step-title">Recoge tu pedido</h3>
+        <p class="how-to__step-text">Ven entre las 14:00 y 23:00. ¡Te estaremos esperando!</p>
       </div>
-
     </div>
   </div>
 </section>
+
+
+<!-- Sección “Descubre nuestras tartas” -->
+<section class="tartas-section">
+  <h2 class="tartas-section__subtitle">Descubre nuestras tartas</h2>
+  <div class="tartas-cards">
+    <!-- Tarjeta 1 -->
+    <div class="tartas-card">
+      <img src="public/assets/images/close-ups/solo-choco2.webp"
+           alt="Cheesecake Clásico"
+           class="tartas-card__img">
+      <h3 class="tartas-card__title">Cheesecake Chocolate Blanco</h3>
+      <p class="tartas-card__text">
+        Nuestra versión tradicional, con un añadido de chocolate blanco.
+      </p>
+        <a class="cta tartas-card__btn" href="tartas.html#clasico">Elegir</a>
+
+    </div>
+    <!-- Tarjeta 2 -->
+    <div class="tartas-card">
+      <img src="public/assets/images/close-ups/solo-lotus.webp"
+           alt="Cheesecake Lotus"
+           class="tartas-card__img">
+      <h3 class="tartas-card__title">Cheesecake Lotus</h3>
+      <p class="tartas-card__text">
+        Con galleta Lotus caramelizada y crema de queso con un toque especiado.
+      </p>
+      <a href="tartas.html#lotus" class="cta tartas-card__btn">Elegir</a>
+    </div>
+    <!-- Tarjeta 3 -->
+    <div class="tartas-card">
+      <img src="public/assets/images/close-ups/solo-oreo2.webp"
+           alt="Cheesecake Pistacho"
+           class="tartas-card__img">
+      <h3 class="tartas-card__title">Cheesecake Oreo</h3>
+      <p class="tartas-card__text">
+        Delicado sabor a galleta Oreo desde la base hasta la cobertura.
+      </p>
+      <a href="tartas.html#pistacho" class="cta tartas-card__btn">Elegir</a>
+    </div>
+  </div>
+  <a href="tartas.html" class="tartas-section__cta-alls">Ver todos los sabores  🍰</a>
+
+</section>
+
 
 
 

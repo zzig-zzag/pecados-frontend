@@ -46,24 +46,67 @@
     <ul>
       <li><a href="index.html">Inicio</a></li>
       <li><a href="tartas.html">Tartas</a></li>
-      <li><a href="delivery.html">Delivery</a></li>
       <li><a href="ubicacion.html" class="active">Ubicación</a></li>
       <li><a href="contacto.html">Contacto</a></li>
     </ul>
   </div>
 
   <main>
-    <section class="tartas-section">
-    <h2> Ubicación </h2>
-      <img src="public/assets/images/working.png" alt="working" class="tartas-img">
-      <p>
-        Página en construcción
-      </p>
-      <p> Integración con mapa interactivo a la ubicación de Google maps
-      </p>
-      <p> Posibilidad de añadirse al final de la página principal</p>
-      <a href="tartas.html" class="cta ver-todas">Go back</a>
+   <!-- Sección “Ubicación Intro” -->
+    <section class="location-intro" id="location-intro">
+      <div class="location-intro__container">
+        <h1 class="location-intro__title">Ubicación</h1>
+        <p class="location-intro__text">
+          Ven a recoger tu pedido directamente en PECADO’S. ¡Estamos deseando conocerte y que disfrutes de nuestras tartas artesanales!
+        </p>
+      </div>
     </section>
+
+    <!-- Sección Location Info -->
+<section class="location-info">
+  <div class="location-info__card">
+    <h2 class="location-info__card-title">Nuestra tienda</h2>
+    <p class="location-info__card-text">
+      Calle Orquídea 12, Aguadulce, Almería
+    </p>
+  </div>
+  <h2 class="location-info__subtitle">Horario de recogida</h3>
+  <p class="location-info__line">⏰ Todos los días: 14:00 – 23:00</p>
+  <p class="location-info__line">⚠️ Importante: Los pedidos del mismo día deben hacerse antes de las 14:00.</p>
+
+  <h2 class="location-info__subtitle">¿Prefieres recibir tu pedido en casa?</h2>
+  <a href="https://glovoapp.com" target="_blank" class="cta location-intro__glovo-btn">
+      Visita nuestro Glovo
+  </a>
+</section>
+
+<!-- Sección Mapa -->
+<section class="location-map">
+  <div class="location-map__container">
+  
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d798.5961598283382!2d-2.581079126712977!3d36.80930188180554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd7071a9e557e1c7%3A0x18d753015ac3cfeb!2sPecados%20Tartas%20de%20Queso%20-%20Agudulce!5e0!3m2!1sen!2ses!4v1752223853557!5m2!1sen!2ses" 
+      width="320"
+      height="600"
+      style="border:0;"
+      
+      allowfullscreen=""
+       loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+      
+    <a
+      href="https://maps.app.goo.gl/WBk5d7nnw6CftUUX6"
+      target="_blank"
+      rel="noopener"
+      class="cta location-map__btn"
+    >
+      Ver en Google Maps
+    </a>
+  </div>
+</section>
+
+
+
   </main>
 
   <!-- FOOTER -->
@@ -72,14 +115,11 @@
       <img src="public/assets/images/main-logo-removebg-preview.png" alt="Logo PECADO'S">
     </div>
     <div class="footer-content">
-                  <div class="footer-schedule">
-                      <p class="footer-title">Horario</p>
-                      <p>Jueves - Martes</p>
-                      <p>10:00 – 14:00</p>
-                      <p>17:00 – 21:00</p>
-                      <p>Miércoles cerrado</p>
-                      <p>Festivos: 10:00 – 20:00</p>
-                  </div>
+                <div class="footer-schedule">
+                  <p class="footer-title">Horario</p>
+                  <p>Lunes - Domingo</p>
+                  <p>14:00 – 22:00</p>
+                </div>
      
 
           <div class="footer-location">

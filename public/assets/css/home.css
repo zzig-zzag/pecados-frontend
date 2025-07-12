@@ -42,15 +42,15 @@
       margin-bottom: 2rem;
     }
 
-      .tartas-section {
-        padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+      .branding-section {
+        padding: 0.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
       }
-      .tartas-section h2 {
+      .branding-section h2 {
           font-family: "Battambang", cursive;
           font-weight: 400;
           font-style: normal;        
@@ -58,12 +58,7 @@
           font-size: 2.2rem;
           padding-bottom: 1rem;
       }
-      .tartas-img {
-        width: 100%;
-        height: auto;
-        margin-bottom: 1rem;
-      }
-      .tartas-section p {
+      .branding-section p {
         font-family: 'Gotu';
         font-size: medium;
         line-height: 1.5;
@@ -71,4 +66,193 @@
         margin-bottom: 0.5rem;
         padding: 0 2rem;
       }
+
+
+      /* Sección Tartas */
+.tartas-section {
+  background: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.tartas-section__subtitle {
+  font-family: 'Lexend', sans-serif;
+  font-size: 1.75rem; /* 28px */
+  margin-bottom: 1.5rem;
+}
+
+/* Grid de tarjetas */
+.tartas-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .tartas-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Cada tarjeta */
+.tartas-card {
+  background: #fff;
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 0.125rem 0.5rem rgba(0,0,0,0.1); /* 2px 8px */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.tartas-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.15);
+}
+
+/* Imagen */
+.tartas-card__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Título de la tarjeta */
+.tartas-card__title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem; /* 20px */
+  margin: 1rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+/* Texto descriptivo */
+.tartas-card__text {
+  flex-grow: 1;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem; /* 16px */
+  color: #555;
+  margin: 0 1rem 1rem;
+  line-height: 1.4;
+}
+
+/* Botón Elegir */
+.tartas-card__btn {
+  display: inline-block;
+  margin: 0 auto 1.5rem;      /* ✅ centrar horizontalmente */
+  padding: 0.6rem 1.2rem;
+  background: #000;
+  color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.2s ease;
+
+}
+.tartas-card__btn:hover {
+  background: #333;
+}
+
+/* Botón “Ver todos los sabores” */
+.tartas-section__cta-alls {
+  display: inline-block;
+  background: #b69856;            /* dorado oscuro */
+  color: #fff;                    /* texto blanco */
+  padding: 0.6rem 1.2rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;          /* 8px */
+  text-decoration: none;
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: 500;
+  margin: 2rem auto 0;            /* 32px encima, centrado */
+  transition: background 0.2s ease;
+}
+.tartas-section__cta-alls:hover {
+  background: #a3874a;
+}
+
+
+
+/* Sección “¿Cómo hacer tu pedido?” */
+.how-to {
+  background: #fdfcfa;
+  padding: 2rem 1.25rem; /* 32px 20px */
+}
+.how-to__container {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+.how-to__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.375rem;     /* 22px */
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 1.5rem;   /* 24px */
+}
+
+/* Pasos */
+.how-to__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;             /* 24px */
+}
+.how-to__step {
+  background: #fcfcfc;
+  border-radius: 1rem;     /* 16px */
+  box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.03);
+  padding: 1.5rem;         /* 24px */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Número de paso */
+.how-to__number {
+  width: 2rem;             /* 32px */
+  height: 2rem;
+  background: #b69856;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;         /* 16px */
+  font-weight: 600;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.75rem;  /* 12px */
+}
+
+/* Icono */
+.how-to__icon {
+  color: #888;
+  width: 3rem;             /* 48px */
+  height: 3rem;
+  margin-bottom: 0.75rem;  /* 12px */
+}
+
+/* Título del paso */
+.how-to__step-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;     /* 18px */
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 0.5rem;   /* 8px */
+}
+
+/* Descripción del paso */
+.how-to__step-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;     /* 14px */
+  color: #555;
+  line-height: 1.4;
+  max-width: 18rem;        /* control de longitud */
+}
+ 
+/* Desktop */
+@media (min-width: 768px) {
+  .how-to__title {
+    font-size: 1.625rem;   /* 26px */
+  }
+}
+
   

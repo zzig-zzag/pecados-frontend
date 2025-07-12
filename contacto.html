@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Gotu&display=swap" 
     rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parastoo:wght@400..700&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
@@ -46,22 +48,108 @@
     <ul>
       <li><a href="index.html" >Inicio</a></li>
       <li><a href="tartas.html">Tartas</a></li>
-      <li><a href="delivery.html">Delivery</a></li>
       <li><a href="ubicacion.html">Ubicación</a></li>
       <li><a href="contacto.html" class="active">Contacto</a></li>
     </ul>
   </div>
 
   <main>
-    <section class="tartas-section">
-    <h2>Contacto</h2>
-      <img src="public/assets/images/working.png" alt="working" class="tartas-img">
-      <p>
-        Página en construcción
-      </p>
-      <p> Formulario para envío automático de email</p>
-      <a href="tartas.html" class="cta ver-todas">Go back</a>
+    <section class="contact-intro">
+      <div class="contact-intro__container">
+        <h1 class="contact-intro__title">Contacto</h1>
+
+            <p class="contact-intro__text">
+              En PECADO'S queremos escucharte. ¿Tienes una sugerencia, duda o deseas colaborar con nosotros?
+              Completa el formulario y te responderemos cuanto antes.
+            </p>
+            <hr class="contact-intro__divider">
+
+      </div>
     </section>
+
+    <!-- Sección formulario Contacto -->
+
+<!-- Sección formulario Contacto -->
+<section class="contact-form" id="contact-form">
+  <div class="contact-form__container">
+    <h2 class="contact-form__title">¿Hablamos?</h2>
+    <form id="form-contacto" action="/contacto" method="POST" novalidate>
+      <input type="text" name="full_name" placeholder="Nombres y apellidos" required
+             class="contact-form__input">
+
+             <input type="email" name="email" placeholder="Correo electrónico" required class="contact-form__input">
+                   <span class="contact-form__error" data-error-for="email">Por favor ingresa un email válido.</span>
+
+                   <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Teléfono (opcional)"
+                    class="contact-form__input"
+                    pattern="^\+?\d*$"
+                    inputmode="tel"
+                         >
+                        <span class="contact-form__error" data-error-for="phone">Sólo números y un “+” inicial opcional.</span>
+
+
+      <select name="reason" class="contact-form__input" required>
+        <option value="" disabled selected>Motivo de contacto</option>
+        <option value="sugerencias">Sugerencias o comentarios</option>
+        <option value="duda">Duda o pregunta</option>
+        <option value="colaboracion">Colaboración hostelería</option>
+        <option value="queja">Queja o incidencia</option>
+        <option value="otro">Otro motivo</option>
+      </select>
+
+      <textarea name="message" placeholder="Tu mensaje..." rows="6" required
+                class="contact-form__input"></textarea>
+
+      <button type="submit" class="cta contact-form__submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<!-- Mensaje de éxito tras envíar -->
+<section class="contact-success" id="contact-success" hidden>
+  <div class="contact-success__container">
+    <h2>Mensaje enviado con éxito.</h2>
+    <p>Pronto te contactaremos, considera revisar tu bandeja de correo no deseado. </p>
+  </div>
+</section>
+
+
+<!-- Sección “Otras formas rápidas de contacto” -->
+<section class="contact-alt">
+  <div class="contact-alt__container">
+    <h2 class="contact-alt__title">Otras formas rápidas de contacto</h2>
+    <div class="contact-alt__buttons">
+      <!-- Botón Teléfono -->
+      <a href="tel:+34684654321" class="contact-alt__btn contact-alt__btn--phone">
+        <!-- SVG teléfono -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact-alt__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6.62 10.79a15.464 15.464 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.18.44 2.45.68 3.76.68a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1C10.07 22 2 13.93 2 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.31.24 2.58.68 3.76a1 1 0 0 1-.24 1.02l-2.2 2.2z"/>
+        </svg>
+        Llámanos: +34 684 65 43 21
+      </a>
+
+      <!-- Botón WhatsApp -->
+      <a href="https://wa.me/34684654321" target="_blank" class="contact-alt__btn contact-alt__btn--whatsapp">
+        <img src="public/assets/images/whatsapp-white-icon.png" alt="WhatsApp" class="contact-alt__icon">
+        Chat directo en WhatsApp
+      </a>
+
+      <!-- Botón Email --> 
+      <a href="mailto:hola@pecados.com" class="contact-alt__btn contact-alt__btn--email">
+        <!-- SVG correo -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="contact-alt__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
+          <polyline points="22,6 12,13 2,6"/>
+        </svg>
+        Envíanos un correo electrónico
+      </a>
+    </div>
+  </div>
+</section>
+
   </main>
 
   <!-- FOOTER -->
@@ -69,15 +157,12 @@
     <div class="footer-logo">
       <img src="public/assets/images/main-logo-removebg-preview.png" alt="Logo PECADO'S">
     </div>
-    <div class="footer-content">
-                  <div class="footer-schedule">
-                      <p class="footer-title">Horario</p>
-                      <p>Jueves - Martes</p>
-                      <p>10:00 – 14:00</p>
-                      <p>17:00 – 21:00</p>
-                      <p>Miércoles cerrado</p>
-                      <p>Festivos: 10:00 – 20:00</p>
-                  </div>
+        <div class="footer-content">
+          <div class="footer-schedule">
+            <p class="footer-title">Horario</p>
+            <p>Lunes - Domingo</p>
+            <p>14:00 – 22:00</p>
+        </div>
      
 
           <div class="footer-location">
@@ -100,6 +185,7 @@
             </a>
           </div>
     </div>
+
     <div class="footer-bottom">
       <p>© 2025 PECADO'S</p>
       <nav class="footer-legal">
@@ -111,6 +197,6 @@
   </footer>
 
   <script src="public/js/main.js"></script>
-
+  <script> src="public/js/contacto.js"</script>
 </body>
 </html>
