@@ -7,7 +7,66 @@
     text-align: center;
     margin-bottom: 1rem;     /* 16px */
   }
-  
+  /* Sección de información */
+                .empty-cart__info {
+                  margin-top: 3rem;
+                  padding: 2rem 1rem;              /* espacio vertical y lateral */
+                  text-align: center;
+                }
+                .empty-cart__info h2 {
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 1.5rem;               /* 24px */
+                  font-weight: 600;
+                  color: #2e2e2e;
+                  margin-bottom:1.75rem;          /* 12px */
+                }
+                .empty-cart__info p {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 1rem;                 /* 16px */
+                  color: #555;
+                  line-height: 1.5;
+                  max-width: 60ch;
+                  margin: 0 auto;             /* 32px abajo */
+                }
+
+                /* Sección de acciones */
+                .empty-cart__actions {
+                  text-align: center;
+                  margin-bottom: 2rem;             /* 32px */
+                }
+                .empty-cart__btn--primary {
+                  display: inline-block;
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 1rem;                 /* 16px */
+                  font-weight: 600;
+                  color: #fff;
+                  background: #b69856;
+                  border: none;
+                  border-radius: 0.75rem;          /* 12px */
+                  padding: 0.75rem 2rem;           /* 12px 32px */
+                  cursor: pointer;
+                  transition: background 0.2s ease;
+                  margin-bottom: 1rem;             /* 16px */
+                }
+                .empty-cart__btn--primary:hover {
+                  background: #a3874a;
+                }
+
+                .empty-cart__help {
+                  font-family: 'Montserrat', sans-serif;
+                  font-size: 0.875rem;             /* 14px */
+                  color: #555;
+                }
+                .empty-cart__help a {
+                  color: #b69856;
+                  font-weight: 600;
+                  text-decoration: none;
+                  transition: text-decoration 0.2s;
+                }
+                .empty-cart__help a:hover {
+                  text-decoration: underline;
+                }
+
   /* --- Lista de productos --- */
   .cart-items__list {
     list-style: none;
@@ -74,3 +133,124 @@
     color: #b69856;
   }
   
+  @media (min-width: 1025px) {
+    main {
+margin: 2rem 10rem;
+    }
+  }
+
+
+  /* Recuadro de mensaje */
+.cart-instructions {
+  padding: 0 1rem 1.5rem;       /* 16px lat, 24px bajo */
+  margin-top: 2rem;
+}
+
+.cart-instructions__title {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;              /* 16px */
+  font-weight: 600;
+  color: #2e2e2e;
+  margin-bottom: 0.5rem;        /* 8px */
+}
+
+.cart-instructions__textarea {
+  width: 100%;
+  height: 5rem;                 /* 80px */
+  background: #fdfbf9;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;        /* 8px */
+  padding: 0.75rem;             /* 12px */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;          /* 14px */
+  color: #444;
+  resize: vertical;
+  margin-bottom: 1.5rem;        /* 24px */
+}
+
+/* --- Resumen de totales --- */
+.cart-summary__container {
+  max-width: 22.5rem;           /* 360px */
+  margin: 0 auto 2rem;          /* margen inferior 32px */
+  background: #fff;
+  padding: 1rem;                /* espacio interior */
+  border-radius: 0.5rem;
+}
+
+.cart-summary__line {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;          /* 14px */
+  color: #555;
+  margin-bottom: 0.5rem;        /* 8px separación */
+}
+.cart-summary__line:last-child {
+  margin-bottom: 0;
+}
+.cart-summary__line span:last-child {
+  font-size: 1rem;              /* 16px */
+  font-weight: 600;
+  color: #2e2e2e;
+}
+.cart-summary__total span:first-child {
+  font-weight: 600;
+}
+
+/* --- Botones de acción --- */
+.cart-actions {
+  max-width: 22.5rem;           /* 360px */
+  margin: 0 auto 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;                 /* 12px entre botones */
+}
+
+.cart-actions__btn {
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 0.75rem;       /* 12px */
+  padding: 0.875rem 1.5rem;     /* 14px 24px */
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  text-decoration: none;
+}
+
+.cart-actions__btn--primary {
+  background: #b69856;
+  color: #fff;
+  font-size: 1rem;              /* 16px */
+  font-weight: 600;
+  border: none;
+}
+.cart-actions__btn--primary:hover {
+  background: #a3874a;
+}
+
+.cart-actions__btn--secondary {
+  background: transparent;
+  color: #b69856;
+  font-size: 0.875rem;          /* 14px */
+  font-weight: 500;
+  border: 2px solid #b69856;
+}
+.cart-actions__btn--secondary:hover {
+  background: #b69856;
+  color: #fff;
+}
+
+/* Desktop: botones en línea 50% ancho */
+@media (min-width: 768px) {
+  .cart-actions {
+    flex-direction: row;
+  }
+  .cart-actions__btn {
+    width: 50%;
+  }
+}
+
+/* Clase utilitaria */
+.hidden {
+  display: none !important;
+}

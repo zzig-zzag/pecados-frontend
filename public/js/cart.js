@@ -2,16 +2,42 @@
 document.addEventListener('DOMContentLoaded', () => {
   const listEl = document.getElementById('cart-items-list');
   let cart = JSON.parse(localStorage.getItem('cart') || '[]');
-
+  const instEl = document.getElementById('cart-instructions');
+  const summarySection = document.getElementById('cart-summary');
+  const actionsSection = document.getElementById('cart-actions');
+  const subtotalEl     = document.getElementById('cart-subtotal');
+  const totalEl        = document.getElementById('cart-total');
+  const checkoutBtn    = document.getElementById('checkout-btn');
+  
   // Capitalizar
   const cap = s => s ? s[0].toUpperCase()+s.slice(1) : '';
 
   function renderCart() {
     listEl.innerHTML = '';
     if (!cart.length) {
-      listEl.innerHTML = `<li class="cart-empty">Tu carrito está vacío.</li>`;
+      summarySection.classList.add('hidden');
+      actionsSection.classList.add('hidden');
+      instEl.classList.add('hidden');
+    
+      const template = document.getElementById('empty-cart-template');
+      listEl.innerHTML = '';
+      listEl.appendChild(template.content.cloneNode(true));
+      
       return;
     }
+    summarySection.classList.remove('hidden');
+    actionsSection.classList.remove('hidden');
+    instEl.classList.remove('hidden');
+
+    
+
+    // Calculamos subtotal  
+      const subtotal = cart
+      .reduce((sum, item) => sum + (item.price * item.quantity), 0)
+      .toFixed(2);
+      subtotalEl.textContent = `€${subtotal}`;
+      totalEl.textContent    = `€${subtotal}`;  // IVA e.g.
+          
     cart.forEach((item, idx) => {
       const name      = item.name;
       const sizeLabel = cap(item.size);
@@ -45,3 +71,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   renderCart();
 });
+
+
+
+
+
+checkoutBtn && checkoutBtn.addEventListener('click', () => {
+  // Ejemplo: enviar al backend para crear sesión Stripe
+  fetch('/api/create-checkout-session', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify({
+      items: cart,
+      notes: document.getElementById('order-notes')?.value || ''
+    })
+  })
+  .then(res => res.json())
+  .then(session => {
+    window.location.href = session.url;
+  })
+  .catch(err => console.error(err));
+});
+

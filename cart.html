@@ -59,59 +59,75 @@
     <section class="cart-title">
         <h1>Tu carrito</h1>
       </section>
-    
+     
       <!-- Lista de productos -->
       <section class="cart-items">
         <ul id="cart-items-list" class="cart-items__list">
           <!-- Se rellenará con JS -->
         </ul>
       </section>
+<!-- Indicaciones al pedido (solo si hay items) -->
+<section id="cart-instructions" class="cart-instructions hidden">
+      <label for="order-notes" class="cart-instructions__title">
+        ¿Alguna indicación para tu pedido?
+      </label>
+      <textarea
+        id="order-notes"
+        class="cart-instructions__textarea"
+        placeholder="Ej. Sin frutos secos / Con etiqueta para regalo…"
+      ></textarea>
+</section>
+  <!-- Resumen de totales -->
+  <section id="cart-summary" class="cart-summary hidden">
+    <div class="cart-summary__container">
+      <div class="cart-summary__line">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">€0.00</span>
+      </div>
+      <div class="cart-summary__line">
+        <span>Gastos de gestión</span>
+        <span>€0.00</span>
+      </div>
+      <div class="cart-summary__line cart-summary__total">
+        <span>Total (IVA incluido)</span>
+        <span id="cart-total">€0.00</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- Botones de acción -->
+  <section id="cart-actions" class="cart-actions hidden">
+    <button id="checkout-btn" class="cart-actions__btn cart-actions__btn--primary">
+      Continuar a pago
+    </button>
+    <a href="tartas.html" class="cart-actions__btn cart-actions__btn--secondary">
+      Seguir comprando
+    </a>
+  </section>
+<template id="empty-cart-template">
+
+
+  <section class="empty-cart__info">
+    <h2>Tu carrito está vacío</h2>
+    <p>¡Hora de pecar con un cheesecake! Empieza explorando nuestros sabores.</p>
+  </section>
+
+  <section class="empty-cart__actions">
+    <a href="tartas.html">
+      <div id="btn-view-flavors" class="empty-cart__btn empty-cart__btn--primary">
+        Ver tartas
+      </div>
+    </a>
+ 
+    <p class="empty-cart__help">
+      ¿Necesitas ayuda? <a href="/contacto.html">Contáctanos</a>
+    </p>
+  </section>
+  
+
+</template>
   </main>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-logo">
-      <img src="public/assets/images/main-logo-removebg-preview.png" alt="Logo PECADO'S">
-    </div>
-        <div class="footer-content">
-          <div class="footer-schedule">
-            <p class="footer-title">Horario</p>
-            <p>Lunes - Domingo</p>
-            <p>14:00 – 22:00</p>
-        </div>
-     
-
-          <div class="footer-location">
-            <a href="https://maps.app.goo.gl/Vcgwji8YFTRtmp9x9" target="_blank">
-              <strong>Calle Orquídea 12, Almería</strong>
-            </a>
-          </div>
-          <div class="socials">
-            <a href="https://facebook.com/tu_pagina" aria-label="Facebook">
-              <img src="public/assets/images/facebook-icon.png" alt="Logo de Facebook">
-            </a>
-            <a href="https://www.instagram.com/pecadoscheesecake/" aria-label="Instagram">
-              <img src="public/assets/images/instagram-icon.png" alt="Logo de Instagram">
-            </a>
-            <a href="https://wa.me/tu_numero" aria-label="WhatsApp">
-              <img src="public/assets/images/whatsapp-icon.png" alt="Logo de WhatsApp">
-            </a>
-            <a href="https://wa.me/tu_numero" aria-label="Tik Tok">
-              <img src="public/assets/images/tiktok-icon.png" alt="Logo de Tik Tok">
-            </a>
-          </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 PECADO'S</p>
-      <nav class="footer-legal">
-        <a href="/aviso-legal.html">Aviso Legal</a>
-        <span> | </span>
-        <a href="/privacidad.html">Política de Privacidad</a>
-      </nav>
-    </div>
-  </footer>
 
   <script src="public/js/main.js"></script>
   <script src="public/js/cart.js"> </script>

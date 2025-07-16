@@ -10,7 +10,7 @@
     if (textEl) {
       textEl.textContent = hour < 12
         ? '❗ Recuerda: los pedidos para el mismo día se cierran a las 12:00.'
-        : '❗ Los pedidos realizados después de la 12:00 podrán recogerse mañana.';
+        : '❗ Los pedidos realizados después de la 12:00 podrán recogerse solo desde mañana.';
     }
 
     // ————— SELECTOR DE TAMAÑO —————
