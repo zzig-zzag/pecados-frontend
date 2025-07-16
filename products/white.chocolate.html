@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PECADO'S Cheesecakes</title>
+  <link rel="stylesheet" href="../public/assets/css/main.css">
+  <link rel="stylesheet" href="../public/assets/css/products.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Gotu&display=swap" 
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parastoo:wght@400..700&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+  <!-- nav -->
+  <header class="navbar">
+    <a href="../index.html">
+        <img src="../public/assets/images/main-logo-removebg-preview.png" alt="PECADO'S Cheesecakes" class="logo-img">
+      </a>
+    <nav>
+      <a href="../cart.html" id="cart-btn" aria-label="Carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+      <button id="burger-btn" aria-label="Menú">
+        <!-- SVG Burger -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MENU DESPLEGABLE -->
+  <div id="mobile-menu" class="menu">
+    <ul>
+      <li><a href="../index.html" >Inicio</a></li>
+      <li><a href="../tartas.html" class="active">Tartas</a></li>
+      <li><a href="../ubicacion.html">Ubicación</a></li>
+      <li><a href="../../contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <main>
+
+    <div class="product-layout">
+            <!-- Sección 1: Hero de Producto -->
+            <section class="product-hero">
+                <nav class="breadcrumbs">
+                    <a href="../index.html">Inicio</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <a href="../tartas.html">Tartas</a>
+                    <span class="breadcrumb-sep">›</span>
+                    <span class="breadcrumb-current">Cheesecake Tradicional</span>
+                  </nav>
+                  
+                <img
+                src="../public/assets/images/close-ups/solo-choco2.webp"
+                alt="Cheesecake Clásico"
+                class="product-hero__img"
+                >
+            </section>
+
+            <div class="product-details">
+
+            <!-- Sección 2: Info Básica del Producto -->
+            <section class="product-info">
+                <h1 class="product-info__title">Cheesecake Clásico</h1>
+                <p class="product-info__desc">
+                Nuestra versión tradicional, cremosa y suave, con la base de galleta artesanal perfectamente horneada. 
+                </p>
+            </section>
+
+
+
+            <!-- Sección 3: Selectores -->
+
+    <section class="product-selectors">
+            <!-- Selector de tamaño -->
+            <div class="selector-group">
+            <h3 class="selector-group__title">Elige tu tamaño</h3>
+            <div class="chips chips--size" role="group" aria-label="Tamaño">
+                <button type="button" class="chip chip--size active" data-size="mini">Mini (1p)</button>
+                <button type="button" class="chip chip--size" data-size="mediano">Mediano (3p)</button>
+                <button type="button" class="chip chip--size" data-size="grande">Grande (10p)</button>
+            </div>
+            </div>
+        
+    <!-- Selector de cantidad -->
+    <div class="selector-group">
+      <h3 class="selector-group__title selector-group__title--mt">Cantidad</h3>
+      <div class="stepper">
+        <button type="button" class="stepper__btn" id="dec-btn">–</button>
+        <span class="stepper__value" id="qty-value">1</span>
+        <button type="button" class="stepper__btn" id="inc-btn">+</button>
+      </div>
+    </div>
+  
+    <!-- Selector de fecha -->
+    <div class="selector-group">
+      <h3 class="selector-group__title selector-group__title--mt">Fecha de recogida</h3>
+      <input type="date" class="selector-group__date" id="pickup-date">
+    </div>
+  
+    <!-- Selector de hora -->
+    <div class="selector-group">
+      <h3 class="selector-group__title selector-group__title--mt-small">Hora de recogida</h3>
+      <div class="chips chips--time" role="group" aria-label="Hora">
+        <button type="button" class="chip chip--time active">14:00–15:00</button>
+        <button type="button" class="chip chip--time">15:00–16:00</button>
+        <button type="button" class="chip chip--time">16:00–17:00</button>
+        <button type="button" class="chip chip--time">17:00–18:00</button>
+        <button type="button" class="chip chip--time">18:00–19:00</button>
+        <button type="button" class="chip chip--time">19:00–20:00</button>
+        <button type="button" class="chip chip--time">20:00–21:00</button>
+        <button type="button" class="chip chip--time">21:00–22:00</button>
+
+
+      </div>
+    </div>
+  </section>
+  <section class="pickup-notice">
+    <p id="pickup-text" class="pickup-notice__text">
+      <!-- Aquí irá el texto que pone el JS -->
+    </p>
+  </section>
+  
+            <!-- Sección Resumen de Pedido -->
+<section class="order-summary">
+    <div class="order-summary__container">
+      <p class="order-summary__total">
+        Total estimado: <span id="order-total">€0.00</span>
+      </p>
+      <button
+        type="button"
+        id="add-to-cart"
+        class="btn btn--add"
+        data-product-id="prod_ABC123"
+        data-price-id="price_123456"
+      >
+        Añadir al carrito
+      </button>
+      <a href="../cart.html"
+      id="view-cart"
+      class="btn btn--view hidden">
+        Ver carrito
+      </a>
+
+            </div>
+        </section>
+        </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img src="../public/assets/images/main-logo-removebg-preview.png" alt="Logo PECADO'S">
+    </div>
+        <div class="footer-content">
+          <div class="footer-schedule">
+            <p class="footer-title">Horario</p>
+            <p>Lunes - Domingo</p>
+            <p>14:00 – 22:00</p>
+        </div>
+     
+
+          <div class="footer-location">
+            <a href="https://maps.app.goo.gl/Vcgwji8YFTRtmp9x9" target="_blank">
+              <strong>Calle Orquídea 12, Almería</strong>
+            </a>
+          </div>
+          <div class="socials">
+            <a href="https://facebook.com/tu_pagina" aria-label="Facebook">
+              <img src="../public/assets/images/facebook-icon.png" alt="Logo de Facebook">
+            </a>
+            <a href="https://www.instagram.com/pecadoscheesecake/" aria-label="Instagram">
+              <img src="../public/assets/images/instagram-icon.png" alt="Logo de Instagram">
+            </a>
+            <a href="https://wa.me/tu_numero" aria-label="WhatsApp">
+              <img src="../public/assets/images/whatsapp-icon.png" alt="Logo de WhatsApp">
+            </a>
+            <a href="https://wa.me/tu_numero" aria-label="Tik Tok">
+              <img src="../public/assets/images/tiktok-icon.png" alt="Logo de Tik Tok">
+            </a>
+          </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 PECADO'S</p>
+      <nav class="footer-legal">
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <span> | </span>
+        <a href="/privacidad.html">Política de Privacidad</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../public/js/main.js"></script>
+  <script src="../public/js/classic.js"></script>
+  <script src="../public/js/products.js"></script>
+</body>
+</html>

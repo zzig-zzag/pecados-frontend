@@ -8,7 +8,7 @@
 
 
 .contact-intro {
-    padding: 0.5rem 0.5rem 2.5rem 0.5rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,6 +25,8 @@
       margin: 0.5rem 0rem;
       font-size: 3rem;
       padding-bottom: 1rem;
+
+
   }
   .contact-intro__text {
     font-family: 'Gotu';
@@ -40,7 +42,7 @@
     border: none;
     height: 1px;
     background: #e0e0e0;
-    width: 50px;
+    width: 70px;
     margin: 0 auto;
   }
 
@@ -75,7 +77,10 @@
 .contact-form__title {
   font-family: 'Gotu';
   font-weight: 900;
+  font-size: 2rem;
   margin-bottom: 1rem;
+  text-align: center;
+
 }
 
 /* Feedback de validación */

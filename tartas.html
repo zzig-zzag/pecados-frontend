@@ -21,14 +21,13 @@
         <img src="public/assets/images/main-logo-removebg-preview.png" alt="PECADO'S Cheesecakes" class="logo-img">
       </a>
     <nav>
-      <button id="cart-btn" aria-label="Carrito">
-        <!-- SVG Carrito -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="cart.html" id="cart-btn" aria-label="Carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <circle cx="9" cy="21" r="1"></circle>
           <circle cx="20" cy="21" r="1"></circle>
           <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
         </svg>
-      </button>
+      </a>
       <button id="burger-btn" aria-label="Menú">
         <!-- SVG Burger -->
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -51,20 +50,97 @@
   </div>
 
   <main>
-    <section class="tartas-section">
-    <h2> Tartas </h2>
-      <img src="public/assets/images/working.png" alt="working" class="tartas-img">
-      <p>
-        Página en construcción
-      </p>
-      <p> Corazón de la página, catálogo visual de los 6 sabores
-      </p>
-      <p>
-            
-      </p>
-      <a href="index.html" class="cta ver-todas">Go back home</a>
-    </section>
+   <!-- Sección introductoria Tartas -->
+<section class="tartas-intro">
+  <div class="tartas-intro__container">
+    <h1 class="tartas-intro__title">NUESTROS CHEESECAKES</h1>
+    <h2 class="tartas-intro__subtitle">
+      Elige tu sabor favorito y selecciona el tamaño perfecto para ti.
+    </h2>
+    <p class="tartas-intro__text">
+      En PECADO’S horneamos a diario nuestras 6 recetas exclusivas. Cada una está disponible en tres tamaños:
+      <strong>mini</strong> (individual), <strong>mediano</strong> (3–5 porciones) y <strong>grande</strong> (8–10 porciones).<br>
+      Todos los pedidos online son para recojo en tienda
+    </p>
+  </div>
+</section>
+<!-- Sección Sabores – Grid de 6 tarjetas -->
+<section class="sabores-grid">
+  <div class="sabores-grid__container">
+   
+
+    <a href="products/lotus.html" class="sabores-card">
+      <img src="public/assets/images/close-ups/solo-lotus.webp" alt="Cheesecake Lotus" class="sabores-card__img">
+      <h3 class="sabores-card__title"> Lotus Biscoff</h3>
+      <p class="sabores-card__desc">Con tu crujiente toque especiado.</p>
+      <svg class="sabores-card__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+      viewBox="0 0 24 24" stroke="#b69856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"/>
+  <polyline points="13,6 19,12 13,18"/>
+</svg>
+    </a>
+
+    <a href="products/pistacho.html" class="sabores-card">
+      <img src="public/assets/images/gallery-fe/solo-pistacho.jpeg" alt="Cheesecake Pistacho" class="sabores-card__img">
+      <h3 class="sabores-card__title">Pistacho</h3>
+      <p class="sabores-card__desc">Una explosión de frutos secos.</p>
+      <svg class="sabores-card__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+      viewBox="0 0 24 24" stroke="#b69856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"/>
+  <polyline points="13,6 19,12 13,18"/>
+</svg>
+    </a>
+    <a href="products/kinder.html" class="sabores-card">
+      <img src="public/assets/images/gallery-fe/solo-kinder.jpeg" alt="Cheesecake Kinder Bueno" class="sabores-card__img">
+      <h3 class="sabores-card__title">Kinder Bueno</h3>
+      <p class="sabores-card__desc">Fresco y frutal en cada mordisco.</p>
+      <svg class="sabores-card__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+      viewBox="0 0 24 24" stroke="#b69856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"/>
+  <polyline points="13,6 19,12 13,18"/>
+</svg>
+    </a>
+    <a href="products/white.chocolate.html" class="sabores-card">
+      <img src="public/assets/images/close-ups/solo-choco2.webp" alt="Cheesecake Chocolate Blanco" class="sabores-card__img">
+      <h3 class="sabores-card__title">Chocolate Blanco</h3>
+      <p class="sabores-card__desc">Para los amantes del chocolate blanco.</p>
+      <svg class="sabores-card__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+      viewBox="0 0 24 24" stroke="#b69856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"/>
+  <polyline points="13,6 19,12 13,18"/>
+</svg>
+    </a>
+
+
+
+    <a href="products/classic.html" class="sabores-card">
+      <img src="public/assets/images/gallery-fe/solo-classic.webp" alt="Cheesecake Clásico" class="sabores-card__img">
+      <h3 class="sabores-card__title">Tradicional</h3>
+      <p class="sabores-card__desc">La esencia tradicional en cada bocado.</p>
+      <svg class="sabores-card__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+            viewBox="0 0 24 24" stroke="#b69856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="13,6 19,12 13,18"/>
+      </svg>
+    </a>
+
+    <a href="products/oreo.html" class="sabores-card">
+      <img src="public/assets/images/close-ups/solo-oreo2.webp" alt="Cheesecake Oreo" class="sabores-card__img">
+      <h3 class="sabores-card__title">Galleta Oreo</h3>
+      <p class="sabores-card__desc">Crunch y crema en armonía.</p>
+      <svg class="sabores-card__arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+      viewBox="0 0 24 24" stroke="#b69856" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="5" y1="12" x2="19" y2="12"/>
+  <polyline points="13,6 19,12 13,18"/>
+</svg>
+    </a>
+  </div>
+</section>
+
+
   </main>
+
+
 
   <!-- FOOTER -->
   <footer>
@@ -113,6 +189,8 @@
   </footer>
 
   <script src="public/js/main.js"></script>
+
+
 
 </body>
 </html>

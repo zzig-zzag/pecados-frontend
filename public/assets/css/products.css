@@ -1,0 +1,372 @@
+body { margin: 0; padding: 0; }
+main {
+    margin-top: 0;
+}
+/* 1) Layout general: mobile‑first */
+.product-layout {
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+
+  }
+ 
+  /* Contenedor para todo lo que va a la derecha */
+  .product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .product-hero__img-wrapper {
+    width: 100%;           /* ocupa la columna completa */
+    display: flex;         /* habilita flexbox */
+    justify-content: center; /* centra horizontalmente */
+    /* opcional: añade algo de “aire” contra los laterales */
+    padding-inline: 1rem;
+    box-sizing: border-box; /* para que el padding no rompa el width */
+  }
+  
+  @media (min-width: 768px) {
+    .product-hero__img-wrapper {
+      padding-inline: 2rem;     /* 32px tablet+ */
+    }
+  }
+  /* 2) En desktop: dos columnas */
+  @media (min-width: 1025px) {
+    .product-layout {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:
+          auto   /* hero */
+          auto   /* info */
+          auto   /* selectors */
+          auto;  /* summary */
+        grid-template-areas:
+          "hero       selectors"
+          "info       selectors"
+          "info       summary"
+          "order      summary";
+          column-gap: 3rem;
+        gap: 2rem;
+      }
+      .product-hero       { grid-area: hero; }
+      .product-info       { grid-area: info; }
+      .product-selectors  { grid-area: selectors; }
+      .order-summary      { grid-area: summary; }
+
+
+      .product-hero {
+        padding: 0 2rem;        /* más espacio en desktop */
+      }
+      .product-hero__img {
+        max-width: 400px;
+        margin: 0rem 2rem;
+        height: 100%;           /* quita height fijo */
+        border-radius: 0 16px 16px 0; /* redondea solo esquinas derechas */
+        }
+        .product-info {
+
+            margin: 2rem 2rem 0rem;
+            padding: 2.5rem 1rem 0.5rem 1rem;      
+            text-align: center;
+          }
+          .product-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin: 0rem 2rem;
+          }
+  }
+/* —— BREADCRUMBS —— */
+/* Breadcrumbs – móvil primero */
+.breadcrumbs {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;                      /* 8px entre crumbs y separadores */
+    height: 1.75rem;                  /* 28px */
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;               /* 12px */
+    font-weight: 400;
+    color: #666;                      /* texto inactivo */
+    margin: 0.75rem 1rem 1rem;        /* mt 12px, mx 16px, mb 16px */ 
+    padding: 0;                       /* no padding en nav */
+  }
+  .breadcrumbs a,
+  .breadcrumb-current {
+    padding: 0 0.25rem;               /* 4px lateral para área táctil */
+    line-height: 1.75rem;             /* alinea vertical */
+    text-transform: capitalize;
+    text-decoration: none;
+    color: inherit;
+  }
+  .breadcrumbs a:hover {
+    text-decoration: underline;
+  }
+  .breadcrumb-sep {
+    color: #aaa;                      /* separador suave */
+    padding: 0 0.25rem;               /* 4px */
+  }
+  .breadcrumb-current {
+    font-weight: 600;                 
+    color: #b69856;                   /* dorado para destacar */
+  }
+  
+  
+  /* —— HERO PRODUCT —— */
+  .product-hero {
+    background: #f4f4f4;              /* mármol suave */
+    position: relative;
+    margin: 0rem 0 1rem;           /* mt 12px, mb 16px */
+    overflow: hidden;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    inset-block-start: 0;
+  }
+  .product-hero__img {
+    display: block;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 4 / 3;              /* móvil: 4:3 */
+    object-fit: cover;
+    border-radius: 0 0 1rem 1rem;     /* solo esquinas inferiores 16px */
+    transition: transform 0.3s ease;
+    box-shadow: inset 0 0.125rem 0.25rem rgba(0,0,0,0.02);
+    justify-content: center;
+  }
+  .product-hero__img:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Breadcrumbs y hero en desktop */
+  @media (min-width: 768px) {
+    .breadcrumbs {
+      height: 2rem;                   /* 32px */
+      font-size: 0.875rem;            /* 14px */
+      margin: 1rem 1.5rem 1rem;       /* mt 16px, mx 24px, mb 16px */
+    }
+    .product-hero {
+      margin: 1rem 0 1.5rem;          /* mt 16px, mb 24px */
+    }
+    .product-hero__img {
+      aspect-ratio: 3 / 4;           /* desktop: 16:9 */
+      height: 100%;                  /* ~400px */
+      border-radius: 0 0 0 0;         /* reset */
+      border-bottom-left-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+    }
+  }
+
+
+/* Sección 1: Hero de Producto */
+.product-hero {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .product-hero__img {
+    display: block;
+    width: 100%;
+    height: 25rem;                /* 320px en móvil */
+    object-fit: cover;
+    border-radius: 1rem;          /* 16px en todas las esquinas */
+  }
+  /* Sección 2: Info Básica del Producto */
+  .product-info {
+    padding: 1.5rem 1rem 0.5rem 1rem;      
+    text-align: center;
+  }
+  .product-info__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;         /* 24px */
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 0.75rem;    /* 12px */
+  }
+  .product-info__desc {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;      /* 15px */
+    color: #555;
+    margin: 0 auto;
+    max-width: 30rem;          /* evita líneas demasiado largas */
+    line-height: 1.4;
+
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  
+  /* Sección Aviso permanente de pickup */
+.pickup-notice {
+    background: #fff7e6;
+    padding: 0.5rem;                /* 8px */
+    border-radius: 0.5rem;          /* 8px */
+    margin-bottom: 1.5rem;          /* 24px */
+    text-align: center;
+  }
+  .pickup-notice__text {
+    font-size: 0.875rem;            /* 14px */
+    color: #aa8000;
+    margin: 0;
+  }
+
+  
+  /* Sección Selectores */
+.product-selectors {
+  padding: 2rem 1rem 0rem;               /* 32px 16px */
+  background: #fff;
+}
+
+/* Grupo común */
+.selector-group {
+  margin-bottom: 2rem;            /* 24px */
+}
+.selector-group__title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;                  /* 16px */
+  font-weight: 600;
+  color: #2e2e2e;
+  text-align: start;
+  margin-bottom: 0.75rem;           /* 12px */
+}
+.selector-group__title--mt {
+  margin-top: 1.5rem;               /* 24px */
+}
+.selector-group__title--mt-small {
+  margin-top: 1rem;                 /* 16px */
+}
+
+/* Chips base */
+.chips {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.75rem;                     /* 12px */
+  padding-bottom: 0.5rem;
+}
+.chip {
+  flex: 0 0 auto;
+  padding: 0.625rem 1rem;           /* 10px 16px */
+  background: #f6f6f6;
+  border: none;
+  border-radius: 0.5rem;            /* 8px */
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 0.875rem;              /* 14px */
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.chip.active {
+  background: #b69856;
+  color: #fff;
+}
+.chip--size.active {
+    background: #b69856;
+    color: #fff;
+  }
+
+/* Stepper */
+.stepper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.75rem;                     /* 12px */
+}
+.stepper__btn {
+  width: 2.5rem;                    /* 40px */
+  height: 2.5rem;
+  background: #eaeaea;
+  border: none;
+  border-radius: 0.5rem;            /* 8px */
+  font-size: 1.25rem;               /* 20px */
+  cursor: pointer;
+}
+.stepper__value {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.125rem;              /* 18px */
+  font-weight: 600;
+  min-width: 2rem;                  /* suficiente para número */
+  text-align: center;
+}
+
+/* Selector de fecha */
+.selector-group__date {
+  width: 100%;
+  padding: 0.75rem 1rem;            /* 12px 16px */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;            /* 8px */
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 1rem;
+}
+
+/* Hide scrollbar on Webkit */
+.chips::-webkit-scrollbar {
+  display: none;
+}
+.chips {
+  -ms-overflow-style: none;         /* IE 10+ */
+  scrollbar-width: none;            /* Firefox */
+}
+
+
+/* Sección Resumen de Pedido */
+.order-summary {
+    background: #fff;
+    padding: 0.5rem 1rem 2rem 1rem;
+    text-align: center;
+  }
+  .order-summary__container {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Total estimado */
+  .order-summary__total {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.625rem;       /* 18px */
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 1.5rem;     /* 24px */
+  }
+  
+  /* Botones comunes */
+  .btn {
+    display: block;
+    width: 100%;
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 1rem;
+    border-radius: 0.75rem;    /* 12px */
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;        /* 16×32px */
+    text-decoration: none;
+  }
+  
+  /* Añadir al carrito */
+  .btn--add {
+    background: #b69856;
+    color: #fff;
+    border: none;
+  }
+  .btn--add:hover {
+    background: #a3874a;
+  }
+  
+  /* Ver carrito */
+  .btn--view {
+    background: #fff;
+    color: #b69856;
+    border: 2px solid #b69856;
+    padding: 0.875rem 1.75rem;  /* 14×28px */
+    text-decoration: none;
+  }
+  .btn--view:hover {
+    background: #b69856;
+    color: #fff;
+  }
+  
+  /* Oculta con .hidden */
+  .hidden {
+    display: none !important;
+  }
+  

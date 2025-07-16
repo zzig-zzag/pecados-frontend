@@ -1,0 +1,89 @@
+.cancelled {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .cancelled__container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* 2. Bloque de error */
+  .cancelled__icon {
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  
+  .cancelled__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 8px;
+  }
+  
+  .cancelled__subtitle {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 24px;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 3. CTAs */
+  .cancelled__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .btn {
+    padding: 0.875rem 1.75rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .btn--primary {
+    background: #b69856;
+    color: white;
+    border: none;
+  }
+  
+  .btn--primary:hover {
+    background: #a3874a;
+  }
+  
+  .btn--secondary {
+    background: #fff;
+    color: #b69856;
+    border: 2px solid #b69856;
+  }
+  
+  .btn--secondary:hover {
+    background: #b69856;
+    color: #fff;
+  }
+  
+  /* 4. Sugerencia final */
+  .cancelled__suggestion {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .cancelled__suggestion a {
+    color: #555;
+    text-decoration: underline;
+  }
+  

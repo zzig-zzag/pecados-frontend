@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PECADO'S Cheesecakes</title>
+  <link rel="stylesheet" href="public/assets/css/main.css">
+  <link rel="stylesheet" href="public/assets/css/success.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Cormorant+Unicase:wght@300;400;500;600;700&family=Gotu&display=swap" 
+    rel="stylesheet">
+
+</head>
+<body>
+  <!-- nav -->
+  <header class="navbar">
+    <a href="index.html">
+        <img src="public/assets/images/main-logo-removebg-preview.png" alt="PECADO'S Cheesecakes" class="logo-img">
+      </a>
+    <nav>
+      <a href="cart.html" id="cart-btn" aria-label="Carrito">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+      <button id="burger-btn" aria-label="Menú">
+        <!-- SVG Burger -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <!-- MENU DESPLEGABLE -->
+  <div id="mobile-menu" class="menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="tartas.html">Tartas</a></li>
+      <li><a href="ubicacion.html" class="active">Ubicación</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <section class="success">
+        <div class="success__container">
+      
+          <!-- 1. Bloque de confirmación -->
+          <div class="success__confirmation">
+            <svg class="success__icon" xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" stroke="#b69856" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="24" cy="24" r="22" />
+              <path d="M16 24l6 6 12-12" />
+            </svg>
+            <h1 class="success__title">¡Gracias por tu pedido!</h1>
+            <p class="success__subtitle">Hemos recibido tu pago correctamente. Te esperamos en tienda el día seleccionado.</p>
+          </div>
+      
+          <!-- 2. Resumen rápido -->
+          <div class="success__summary">
+            <ul class="summary__list">
+              <li><strong>Fecha de recogida:</strong> <span id="pickup-date">15 de julio</span></li>
+              <li><strong>Hora de recogida:</strong> <span id="pickup-time">18:00</span></li>
+            </ul>
+            <p class="summary__total">Total pagado: <span id="order-total">€18.90</span></p>
+          </div>
+      
+          <!-- 3. CTA finales -->
+          <div class="success__actions">
+            <a href="/pedido.html" class="btn btn--primary">Ver mi pedido</a>
+            <a href="/" class="btn btn--secondary">Volver al inicio</a>
+            <a href="/contacto" class="success__help">¿Necesitas ayuda? Contáctanos</a>
+          </div>
+      
+        </div>
+      </section>
+      
+
+
+  </main>

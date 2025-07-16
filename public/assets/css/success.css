@@ -1,0 +1,105 @@
+.success {
+    padding: 3rem 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .success__container {
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* 1. Bloque de confirmación */
+  .success__icon {
+    display: block;
+    margin: 0 auto 1rem;
+  }
+  
+  .success__title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 8px;
+  }
+  
+  .success__subtitle {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 24px;
+    max-width: 60ch;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 2. Resumen rápido */
+  .summary__list {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #2e2e2e;
+    text-align: left;
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+  }
+  
+  .summary__list li {
+    margin-bottom: 6px;
+  }
+  
+  .summary__total {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  
+  /* 3. CTA Finales */
+  .success__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .btn {
+    padding: 0.875rem 1.75rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    text-align: center;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .btn--primary {
+    background: #b69856;
+    color: white;
+    border: none;
+  }
+  
+  .btn--primary:hover {
+    background: #a3874a;
+  }
+  
+  .btn--secondary {
+    background: #fff;
+    color: #b69856;
+    border: 2px solid #b69856;
+  }
+  
+  .btn--secondary:hover {
+    background: #b69856;
+    color: #fff;
+  }
+  
+  .success__help {
+    margin-top: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #555;
+    text-decoration: underline;
+  }
+  
