@@ -58,6 +58,30 @@ main {margin-top: 0;}
   background: #fcfcfa;
 
 }
+.sabores-card {
+  display: flex;
+  flex-direction: column;
+  /* ...tus estilos existentes... */
+}
+
+.sabores-card__cta {
+  display: inline-block;
+  margin: 0.5rem 1rem 0.5rem;                /* empuja el botón al fondo de la tarjeta */
+  background: #897234;             /* dorado oscuro */
+  color: #fff;
+  padding: 0.5rem 1rem;            /* 8px 16px */
+  border-radius: 0.75rem;          /* 12px */
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 0.875rem;             /* 14px */
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.sabores-card__cta:hover {
+  background: #d4af37;             /* dorado claro al hover */
+}
+
 
 /* Dos columnas en tablet */
 @media (min-width: 640px) {

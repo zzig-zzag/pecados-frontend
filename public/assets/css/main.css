@@ -51,11 +51,7 @@ nav a {
   text-decoration: none;
 }
 
-/* 1. SVG un 15% más grandes */
-nav button svg {
-  transform: scale(1.15);
-  transition: transform 0.2s ease;
-}
+
 
 /* 2. Menú desplegable estético y oculto por defecto */
 .menu {
@@ -286,8 +282,5 @@ nav button svg {
     .menu {
       display: none !important;
     }
-      source {
-        height: 65 vh;
-      }
   }
   
