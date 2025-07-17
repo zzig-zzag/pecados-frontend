@@ -70,7 +70,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   renderCart();
+  updateCartBadge();
+
 });
+updateCartBadge();
 
 
 

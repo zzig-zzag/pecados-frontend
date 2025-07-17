@@ -111,6 +111,9 @@
     }
     updateTotal();
 
+    
+
+
     // ————— AÑADIR AL CARRITO —————
     addBtn && addBtn.addEventListener('click', () => {
       const cart = JSON.parse(localStorage.getItem('cart')||'[]');
@@ -127,6 +130,7 @@
       viewBtn && viewBtn.classList.remove('hidden');
       alert('Artículo añadido al carrito');
     });
+    updateCartBadge();
 
     // ————— VER CARRITO —————
     viewBtn && viewBtn.addEventListener('click', () => {
@@ -136,6 +140,8 @@
     // — Mostrar “Ver carrito” si hay items
     if (viewBtn && JSON.parse(localStorage.getItem('cart')||'[]').length) {
       viewBtn.classList.remove('hidden');
-    }
+    };
+
+
   });
 })();
